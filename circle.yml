@@ -5,6 +5,7 @@ dependencies:
 
 test:
   override:
+    - android list targets
     - echo no | android create avd -n testing -t android-21
     - $ANDROID_HOME/tools/emulator -avd testing -no-window -no-boot-anim -no-audio:
         background: true
