@@ -5,7 +5,7 @@ dependencies:
 
 test:
   override:
-    - android update sdk -a -u -t sys-img-x86-android-21
+    - echo y | android update sdk -a -u -t sys-img-x86-android-21
     - echo no | android create avd -n testing -t android-21
     - $ANDROID_HOME/tools/emulator -avd testing -no-window -no-boot-anim -no-audio:
         background: true
